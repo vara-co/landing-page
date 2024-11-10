@@ -76,6 +76,7 @@ section {
     margin-right: 10px; /* Spacing between elements */
 }
 
+
 .navbar__menu .menu__link {
     display: block;
     padding: 1em;
@@ -89,6 +90,23 @@ section {
     color: #135dbd;
     transition: ease 0.3s all;
 }
+
+/* Hovering effect over li elements in Nav-bar*/
+#navbar__list li {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 5px;
+    display: inline-block;
+    position: relative;
+}
+
+/* Hover effect for navbar items */
+#navbar__list li:hover {
+    background-color: rgb(243, 12, 135); 
+    color: rgb(249, 245, 248); 
+    /*font-weight: bold;*/
+    transform: scale(1.1); /* Minimum scale of elements upon hover*/
+}
+
 
 /* Header Styles */
 .page__header {
