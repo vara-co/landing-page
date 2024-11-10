@@ -13,73 +13,117 @@
  * 
 */
 
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
-
-/**
- * Define Global Variables
- * 
-*/
-let section1 = document.getElementById('section1');
-let section2 = document.getElementById('section2');
-let section3 = document.getElementById('section3');
-let section4 = document.getElementById('section4');
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-
+// Main Event Listener Function triggered when DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Get all the sections 
-  const sections = document.querySelectorAll('section');
-  // Get the <ul> elements by the Id
-  const navList = document.getElementById("navbar__list"); 
-  // Create an empty array to store the <li> elements
-  const navListArray = [];
+    // Get all the sections 
+    const sections = document.querySelectorAll('section');
+    // Get the <ul> elements by the Id
+    const navList = document.getElementById("navbar__list"); 
+    // Create an empty array to store the <li> elements
+    const navListArray = [];
+  
+    // ForEach loop to dynamically create new <li> elements and add the appropriate classList
+    // NOTE: this function creates Nav-bar including smooth scrolling and active class
+    sections.forEach((section, index) => { 
+      const navName = section.dataset.nav;
+      const listItem = document.createElement("li"); 
+      listItem.classList.add("menu__link"); 
+      listItem.innerText = navName; 
+  
+      // Add class 'active' to section when near top of viewport
+      if (index === 0) {
+        listItem.classList.add("active-nav");  
+      }
+  
+      /* Click event listener function for smooth scrolling using scrollTo
+      Note: this function calls in removeActiveClass() and highlightActiveNav() functions defined further below
+      This function also allows for a smooth scrolling, to avoid the use of <a> tags and the 
+      need for the removal of default behavior using event.preventDefault()*/
+      listItem.addEventListener("click", () => {
+        // Get the offsetTop of the section (distance from the top of the document)
+        const sectionStart = section.offsetTop; 
 
-  // ForEach loop to create new <li> elements and add the appropriate classList
-  sections.forEach((section, index) => {
-    const navName = section.dataset.nav;
-    const listItem = document.createElement("li"); 
-    listItem.classList.add("menu__link"); 
-    listItem.innerText = navName; 
+        // Scroll to the section 
+        window.scrollTo({
+          top: sectionStart,
+          behavior: "smooth"
+        });
+  
+        // Call in the Remove Active Class function
+        removeActiveClass();
+        // Add the active class only to clicked section in nav-bar
+        section.classList.add("the-active-class");
+        // Call in the highlight function 
+        highlightActiveNav(listItem);
+      });  // End of smooth scrolling function
+  
+      // Push item into the <li> array
+      navListArray.push(listItem);
+    });  // End of function to create Nav-bar
+  
+    // Append the <li> items to the <ul>
+    // Note: Using this line of code replaces the need for appendChild or innerHTML
+    navList.append(...navListArray);
+  
+    // Function to remove active class from non-selected sections
+    function removeActiveClass() {
+      sections.forEach(section => {
+        section.classList.remove("the-active-class");
+      });
+    } // end of removeActiveClass() function
+  
+    // Function to highlight the active navigation item
+    function highlightActiveNav(clickedNavItem) {
+      const allNavItems = navList.querySelectorAll("li");
+      allNavItems.forEach(navItem => {
+        navItem.classList.remove("active-nav");
+      });
+      clickedNavItem.classList.add("active-nav");
+    } // end of highlightActiveNav() function
+  
+    // Function to check if sections are in viewport
+    function makeActive() {
+      // ForEach Loop to iterate through the sections
+      sections.forEach((section, index) => {
+        const viewportsection = section.getBoundingClientRect();
+        // Use an ideal value 150px offset might work best
+        const value = 150;
+  
+        // Checking if section in viewport with conditional
+        if (viewportsection.top <= value && viewportsection.bottom >= value) {
+          // Give it active state in current section 
+          section.classList.add("the-active-class");
+          highlightActiveNav(navListArray[index]);
+        } else {
+          // Remove active state
+          section.classList.remove("the-active-class");
+          navListArray[index].classList.remove("active-nav");
+        }
+      });
+    } // end of makeActive() function
+  
+    // Listen for scroll events to update the active section, passing makeActive() function without calling it
+    // prior to optimization 
+    //window.addEventListener("scroll", makeActive);
+    // Call in makeActive function in case page loads with a section on view
+    //makeActive();
+    // After Performance Optimization
+    let isScrolling = false;
 
-    // Add class 'active' to section when near top of viewport
-    if (index === 0) {
-      listItem.classList.add("active-nav");  
-    }
-    // Push item into the <li> array
-    navListArray.push(listItem);
+    // To avoid makeActive function being called during every single scroll
+    window.addEventListener("scroll", () => {
+        if (!isScrolling){
+            isScrolling = true;
+            window.requestAnimationFrame(() => {
+                makeActive();
+                isScrolling = false;
+            });
+        }
+    }); // end of makeActive optimization event listener function
+
+
   });
-  // Append the <li> items to the <ul>
-  navList.append(...navListArray);
-});
+  
 
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
 
 
