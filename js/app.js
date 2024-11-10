@@ -22,7 +22,10 @@
  * Define Global Variables
  * 
 */
-
+let section1 = document.getElementById('section1');
+let section2 = document.getElementById('section2');
+let section3 = document.getElementById('section3');
+let section4 = document.getElementById('section4');
 
 /**
  * End Global Variables
@@ -30,18 +33,38 @@
  * 
 */
 
-
-
 /**
  * End Helper Functions
  * Begin Main Functions
  * 
 */
 
-// build the nav
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Get all the sections 
+  const sections = document.querySelectorAll('section');
+  // Get the <ul> elements by the Id
+  const navList = document.getElementById("navbar__list"); 
+  // Create an empty array to store the <li> elements
+  const navListArray = [];
 
-// Add class 'active' to section when near top of viewport
+  // ForEach loop to create new <li> elements and add the appropriate classList
+  sections.forEach((section, index) => {
+    const navName = section.dataset.nav;
+    const listItem = document.createElement("li"); 
+    listItem.classList.add("menu__link"); 
+    listItem.innerText = navName; 
+
+    // Add class 'active' to section when near top of viewport
+    if (index === 0) {
+      listItem.classList.add("active-nav");  
+    }
+    // Push item into the <li> array
+    navListArray.push(listItem);
+  });
+  // Append the <li> items to the <ul>
+  navList.append(...navListArray);
+});
 
 
 // Scroll to anchor ID using scrollTO event
