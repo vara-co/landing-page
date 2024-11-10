@@ -1,10 +1,27 @@
-# Landing Page Project
+<h1 align="center">UDACITY Front End Web Development Nanodegree<br/>
+Project 4: Dynamic Landing Page </h1>
+<h2 align="center">Using HTML, CSS, JavaScript and DOM manipulation<br/>
+<br/>
+by Laura Vara</h2>
 
-## Instructions
+## Introduction:
+This project was created to practice real-world scenarios for DOM manipulation. The functionality of this project shows how to append dynamically by addind data to the DOM, and to show how JavaScript can make a website more dynamic vs a static web page.
 
+This project is meant to be a one page, which smoothly scrolls up and down depending on the element selected in the Navigation Bar. Hovering-over the element will highlight the section, but clicking on it, will create the smooth transitioning scroll.
 
+The starter Code can be found here: https://github.com/udacity/cd0428-landing-page/ 
+However, edits were made to make this project more personalized. 
 
-Starter Code can be found here: https://github.com/udacity/cd0428-landing-page/ 
+## Content of the repository:
+- CSS Directory
+  - styles.css <-- Ladning Page styling file
+- js Directory
+  - app.js <-- JavaScript functions to make this landing page dynamic
+- index.html <-- Main HTML content file
+-.DS_Store
+- CODEOWNERS
+- LICENSE.txt
+- README.md
 
 ## References & Resources:  
 **DOMContentLoaded:**
