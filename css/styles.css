@@ -11,8 +11,8 @@
 
 /* ---- Base Rules ---- */
 body {
-    background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    background: rgb(156, 55, 89);
+    background: linear-gradient(0deg, rgb(235, 5, 131) 0%, rgb(0, 8, 55) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
@@ -28,7 +28,7 @@ h1 {
 
 @media only screen and (min-width: 35em){
     h1 {
-        font-size: 7em;
+        font-size: 4em;
         margin: 2em 4rem 1em;
     }
 }
@@ -36,7 +36,7 @@ h1 {
 h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
-    font-size: 3em;
+    font-size: 2.5em;
     color: #fff;
 }
 
@@ -64,6 +64,7 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
@@ -72,6 +73,7 @@ section {
 
 .navbar__menu li {
     display: inline-block;
+    margin-right: 10px; /* Spacing between elements */
 }
 
 .navbar__menu .menu__link {
@@ -84,13 +86,14 @@ section {
 
 .navbar__menu .menu__link:hover {
     background: #333;
-    color: #fff;
+    color: #135dbd;
     transition: ease 0.3s all;
 }
 
 /* Header Styles */
 .page__header {
-    background: #fff;
+    /*background: #c1138f;*/
+    background: linear-gradient( 50deg, rgb(235, 5, 131) 0%, rgb(14, 33, 136) 100%);
     position: fixed;
     top: 0;
     width: 100%;
@@ -99,7 +102,7 @@ section {
 
 /* Footer Styles */
 .page__footer {
-    background: #000;
+    background: #0a001f;
     padding: 3em;
     color: #fff;
 }
