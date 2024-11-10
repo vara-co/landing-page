@@ -4,10 +4,16 @@ Project 4: Dynamic Landing Page </h1>
 <br/>
 by Laura Vara</h2>
 
+![image](https://github.com/user-attachments/assets/42a0f6d6-7197-497e-86aa-c73f2a789dd8)
+
+
 ## Introduction:
 This project was created to practice real-world scenarios for DOM manipulation. The functionality of this project shows how to append dynamically by addind data to the DOM, and to show how JavaScript can make a website more dynamic vs a static web page.
 
 This project is meant to be a one page, which smoothly scrolls up and down depending on the element selected in the Navigation Bar. Hovering-over the element will highlight the section, but clicking on it, will create the smooth transitioning scroll.
+
+![image](https://github.com/user-attachments/assets/ecf26b75-098f-4192-9236-43645126df64)
+
 
 The starter Code can be found here: https://github.com/udacity/cd0428-landing-page/ 
 However, edits were made to make this project more personalized. 
