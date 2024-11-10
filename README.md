@@ -10,3 +10,6 @@ For specific, detailed instructions, look at the project instructions in the Uda
 
 
 Starter Code can be found here: https://github.com/udacity/cd0428-landing-page/ 
+
+## References
+- Mouseover and Mouseout Event Listeners: https://www.shecodes.io/athena/43030-how-to-add-hover-effects-to-a-button-in-javascript#:~:text=Answered%20in%202.5%20seconds,JavaScript%20button%20hover%20mouseover%20mouseout
