@@ -124,10 +124,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }); // End of makeActive optimization event listener function
   
+    // Ensures that active classes are updated on window resize
     window.addEventListener("resize", () => {
-      makeActive();  // Ensure that active classes are updated on window resize
+      makeActive();  
     });
   
-    makeActive();  // Call initially to ensure the active class is set on page load
+    makeActive();  // Call function at the beginning when loading page
   });
-  
