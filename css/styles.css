@@ -1,11 +1,9 @@
 /*
- *
- * CSS written based on SMACSS architecture.
- * To learn more, visit: http://smacss.com/
- * 
- * For simplicity, no reset or normalize is added. 
- * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
- *
+ CSS written based on SMACSS architecture.
+ To learn more, visit: http://smacss.com/
+ For simplicity, no reset or normalize is added. 
+ To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ 
 */
 
 
@@ -172,13 +170,13 @@ section {
     }
 }
 
-@media only screen and (max-width: 600px) {
+/*@media only screen and (max-width: 600px) {
     .landing__container {
         padding: 2em;
         max-width: 100%;
 
     }
-}
+}*/
 
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
