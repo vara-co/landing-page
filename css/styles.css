@@ -107,6 +107,28 @@ section {
     transform: scale(1.1); /* Minimum scale of elements upon hover*/
 }
 
+/* Active navigation link style */
+.active-nav {
+    color: #ffffff; /* Make the active link color stand out */
+    font-weight: bold; /* Make the active link bold */
+    border-bottom: 2px solid #ffffff; /* Add a bottom border for emphasis */
+    background-color:rgb(243, 12, 135); /* Optional: Add a subtle background */
+}
+
+/* Style the active section in the viewport */
+.the-active-class {
+    background: linear-gradient(0deg, rgb(220, 234, 222) 0%, rgba(5, 231, 23, 0.914) 100%);
+    color: #fff; /* Ensure text is visible when active */
+}
+
+/* For hover effect when an active link is hovered */
+.menu__link:hover {
+    background: #333; /* Subtle background change */
+    color: #135dbd;
+    transition: ease 0.3s all;
+}
+
+
 
 /* Header Styles */
 .page__header {
@@ -143,6 +165,13 @@ section {
         padding: 4em;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    section {
+        padding-top: 60px; /* Adjust based on your navbar height */
+    }
+}
+
 
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
