@@ -1,0 +1,101 @@
+<!DOCTYPE >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list">
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>Laura's Roadmap Towards Becoming a Developer</h1>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Data Analytics" class="the-active-class">
+      <div class="landing__container">
+        <h2>Data Analytics</h2>
+        <p>
+          Data Analytics was my first step into the tech world, igniting my fascination with AI's transformative potential and the stunning, informative data visualizations across the web. Diving into this field, I developed the skills to uncover insights from data, leveraging Python tools like Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, Plotly, TensorFlow, and PyTorch. I also explored SQL and NoSQL databases—PostgreSQL was a favorite—while learning to visualize data with Tableau. Training machine learning models was mind-blowing, deepening my appreciation for AI, which was my initial inspiration to pivot into tech.
+          However, it was when I started building visualizations using HTML, CSS, and JavaScript that I truly fell in love with coding. I realized I wanted to create visuals that could not only inform but inspire. This journey evolved further as I explored web-based maps using Leaflet and APIs, pulling me toward web development. With a foundation in JavaScript, HTML, and CSS, I felt the drive to immerse myself even deeper into coding, sparking the start of my journey toward becoming a full-fledged developer.
+        </p>
+        <h3>Skills Learned:</h3>
+        <p>
+          Git, GitHub, Python, Pandas, Matplotlib, APIs, SQL, NoSQL, PostgreSQL, SQLAlchemy, SQLite, MongoDB, Flask, Machine Learning Models, Big Data, Spark, Google Colab, VBA, Excel, HTML, CSS, JavaScript, Tableau, amongst others.
+        </p>
+      </div>
+    </section>
+
+    <section id="section2" data-nav="Front-End">
+      <div class="landing__container">
+        <h2>Front-End Web Developer</h2>
+        <h3>You are here!</h3>
+        <p>
+          Learning to create a web page from scratch was humbling and, admittedly, a bit intimidating at first. But once the basic "skeleton" was in place, it started to feel more intuitive. With practice, coding became almost second nature, and I learned the importance of navigating documentation to find the right guidance. Building a functional, dynamic website from a few lines of code was thrilling, especially as I layered in more complexity with JavaScript functions.
+          As an artist, I found styling with CSS incredibly rewarding—I could control fonts, colors, and layout details to shape the visual experience. Discovering that CSS could even handle animations opened up exciting new possibilities for creative expression, and I look forward to exploring that further. Through real-life projects like a blog, shopping cart, and landing page, I gained hands-on experience that grounded me in the potential of web development for building engaging, user-friendly company websites. While there’s still much to learn, this phase has given me a fantastic foundation in my journey toward becoming a developer.
+        </p>
+        <h3>Skills Learned:</h3>
+        <p>
+          HTML, CSS (Flexbox and Grid), JavaScript, and the DOM
+        </p>
+      </div>
+    </section>
+
+    <section id="section3" data-nav="Full-Stack">
+      <div class="landing__container">
+        <h2>Full-Stack Web Developer</h2>
+        <p>
+          This is where the real adventure begins! With a solid foundation in Data Analytics and databases, I’m excited to dive into back-end development, a field that already feels familiar. Combining this with my recent skills in HTML, CSS, and JavaScript, I see a clear path to becoming a full-stack developer. This new phase will let me reinforce what I know, while adding fresh concepts that bridge the gaps.
+          I’m still mapping out the best way to gain the comprehensive knowledge needed for this next step in my developer career, but I’m confident in my ability to find the right resources and tools to make it happen. With resourcefulness and persistence, I’ll continue progressing on this exciting journey toward becoming a versatile and well-rounded developer.
+        </p>
+        <h3>Skills to Learn:</h3>
+        <p>
+          <strong>Frontend Development:</strong>Proficiency in HTML (including SEO best practices), CSS (Flexbox, Grid, and responsive design), and JavaScript (especially the DOM). Experienced with frontend frameworks like React, Vue, and Angular. Familiar with TypeScript for added type safety.<br>
+
+          <strong>Backend Development:</strong> Skilled in JavaScript with Node.js, and Python with Django and Flask. Experienced in building and consuming APIs, RESTful services, handling authentication and authorization, and managing servers.<br>
+
+          <strong>Databases:</strong> Knowledgeable in both SQL and NoSQL databases, with a focus on CRUD operations.<br>
+
+          <strong>Version Control & Collaboration:</strong>Reinforced skills in Git for version control and collaborative coding workflows.<br>
+
+          <strong>Hosting & Deployment:</strong> Familiar with deploying and hosting applications on various platforms.<br>
+
+          <strong>Web Security:</strong>Understanding the basics of web security, including HTTPS, CORS, and CSRF protection.<br>
+        </p>
+      </div>
+    </section>
+
+    <section id="section4" data-nav="JavaScript DevOp">
+      <div class="landing__container">
+        <h2>JavaScript Developer</h2>
+        <p>
+          While I’m still refining my path, I’m certain about a few things: I want to become highly proficient in JavaScript, and I’m passionate about working in the entertainment industry. Whether I pursue JavaScript development, explore Java, or delve into C++ or C# for software or video game development, I’m open to the possibilities. Right now, I see this as a journey of discovery. As I continue to expand my skill set in the Full-Stack phase, I expect to gain more clarity on where my true interests lie. With a strong foundation in Data Analytics, Front-End, and Full-Stack development, I’m excited to see how everything aligns as I move forward.
+        </p>  
+        <h3>Skills to Learn:</h3>
+        <p>TBD</p>
+      </div>
+    </section>
+
+  </main>
+  <footer class="page__footer">
+    <p>&copy Udacity</p>
+  </footer>
+  <!--Link to the JavaScript File -->
+  <script src="/js/app.js"></script>
+</body>
+</html>
