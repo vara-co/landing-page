@@ -168,10 +168,17 @@ section {
 
 @media only screen and (max-width: 600px) {
     section {
-        padding-top: 60px; /* Adjust based on your navbar height */
+        padding-top: 60px; 
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .landing__container {
+        padding: 2em;
+        max-width: 100%;
+
+    }
+}
 
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
